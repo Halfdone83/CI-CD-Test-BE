@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS'  // Само ако си инсталирал NodeJS tool в Jenkins
+        nodejs 'NodeJS'
+    }
+
+    environment {
+        
+        CI = 'true'
     }
 
     stages {
